@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animated Text and Icon Menu with jQuery</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Animated Text and Icon Menu with jQuery"
+    />
+    <meta
+      name="keywords"
+      content="jquery, menu, navigation, sliding, animation, icon"
+    />
+    <meta name="author" content="Codrops" />
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    <link rel="stylesheet" type="text/css" href="css/stimenu1.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Wire+One&v1"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <ul id="sti-menu" class="sti-menu">
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">CODING</h2>
+            <h3 data-type="sText" class="sti-item">
+              Promote my creative thinking. Helping me discover alternative ways
+              to approach a problem.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-1 sti-item"></span>
+          </a>
+        </li>
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">GAMES</h2>
+            <h3 data-type="sText" class="sti-item">
+              Video games allow me to experience excitement and danger all from
+              the safety of my chair.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-2 sti-item"></span>
+          </a>
+        </li>
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">GYM</h2>
+            <h3 data-type="sText" class="sti-item">Educating you</h3>
+            <span data-type="icon" class="sti-icon sti-icon-3 sti-item"></span>
+          </a>
+        </li>
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">MUSIC</h2>
+            <h3 data-type="sText" class="sti-item">For a healthier future</h3>
+            <span data-type="icon" class="sti-icon sti-icon-4 sti-item"></span>
+          </a>
+        </li>
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">MOVIES</h2>
+            <h3 data-type="sText" class="sti-item">From the latest research</h3>
+            <span data-type="icon" class="sti-icon sti-icon-5 sti-item"></span>
+          </a>
+        </li>
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">MARTIAL ARTS</h2>
+            <h3 data-type="sText" class="sti-item">
+              Taekwondo and Kickboxing are one of the hobbies that can help me,
+              to be physically and mentally fit.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-6 sti-item"></span>
+          </a>
+        </li>
+
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">PAINTING</h2>
+            <h3 data-type="sText" class="sti-item">
+              Painting gives me the opportunity to express my feelings and
+              emotions most profoundly.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-7 sti-item"></span>
+          </a>
+        </li>
+
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">PHOTOGRAPHY</h2>
+            <h3 data-type="sText" class="sti-item">
+              Photography as a hobby is an opportunity to document every part of
+              my journey, no matter how small it may be.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-8 sti-item"></span>
+          </a>
+        </li>
+
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">READING</h2>
+            <h3 data-type="sText" class="sti-item">
+              It is an empowering hobby that does not only entertain me, but
+              there is always something to gain, something to learn.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-9 sti-item"></span>
+          </a>
+        </li>
+
+        <li data-hovercolor="#ffffff">
+          <a href="#">
+            <h2 data-type="mText" class="sti-item">TRAVEL</h2>
+            <h3 data-type="sText" class="sti-item">
+              My favourite hobby, because I love discovering new cities and
+              places around the world.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-10 sti-item"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"
+    ></script>
+
+    <script type="text/javascript" src="js/jquery.iconmenu.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#sti-menu").iconmenu({
+          animMouseenter: {
+            mText: { speed: 500, easing: "easeOutExpo", delay: 200, dir: -1 },
+            sText: { speed: 500, easing: "easeOutExpo", delay: 200, dir: -1 },
+            icon: { speed: 700, easing: "easeOutBounce", delay: 0, dir: 1 },
+          },
+          animMouseleave: {
+            mText: { speed: 400, easing: "easeInExpo", delay: 0, dir: -1 },
+            sText: { speed: 400, easing: "easeInExpo", delay: 0, dir: 1 },
+            icon: { speed: 400, easing: "easeInExpo", delay: 0, dir: -1 },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
